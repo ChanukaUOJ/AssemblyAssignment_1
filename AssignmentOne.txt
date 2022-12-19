@@ -1,0 +1,24 @@
+      INP R0, 2
+      MOV R1, #0
+startloop:
+      ADD R1,R1,#1
+      CMP R0,R1
+      BEQ endloop
+      ADD R2,R2,R1
+      B startloop
+endloop:
+      OUT R2,4
+      HALT 
+
+
+      INP R0, 2
+      MOV R1, #0
+startloop:
+      CMP R0, R1
+      BEQ endloop
+      ADD R1,R1,#2
+      ADD R2,R2,R1
+      B startloop
+endloop:
+      OUT R2, 4
+      HALT
